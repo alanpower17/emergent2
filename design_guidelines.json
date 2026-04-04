@@ -1,0 +1,151 @@
+{
+  "theme": {
+    "name": "MyLunaPark Dark/Neon",
+    "archetype": "7 (Electric & Neon)",
+    "mode": "dark",
+    "description": "A high-energy, cyberpunk-inspired dark theme perfect for a nightlife amusement park app. It contrasts deep void blacks with striking neon accents (Electric Magenta, Laser Cyan) to guide the user's eye, while maintaining extreme clarity for the dense data dashboards used by Organizers, Ride Owners, and Admins."
+  },
+  "typography": {
+    "fonts": {
+      "headings": "Unbounded",
+      "body": "Outfit",
+      "monospace": "JetBrains Mono"
+    },
+    "hierarchy": {
+      "h1": "text-4xl sm:text-5xl lg:text-6xl font-black tracking-tighter",
+      "h2": "text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight",
+      "h3": "text-xl sm:text-2xl font-semibold tracking-tight",
+      "h4": "text-lg sm:text-xl font-medium",
+      "body": "text-base leading-relaxed",
+      "small_label": "text-xs uppercase tracking-[0.2em] font-medium"
+    },
+    "pairing_strategy": "Wide Display Sans (Unbounded) for impactful, electric headlines. Clean Geometric Sans (Outfit) for dense dashboard legibility."
+  },
+  "colors": {
+    "background": {
+      "base": "#05050A",
+      "surface": "#0F0F15",
+      "glass": "rgba(15, 15, 21, 0.65)"
+    },
+    "text": {
+      "primary": "#FFFFFF",
+      "secondary": "#A1A1AA",
+      "muted": "#71717A"
+    },
+    "primary": {
+      "DEFAULT": "#FF2A6D",
+      "hover": "#FF528A",
+      "glow": "rgba(255, 42, 109, 0.5)"
+    },
+    "secondary": {
+      "DEFAULT": "#01CDFE",
+      "hover": "#33D7FF",
+      "glow": "rgba(1, 205, 254, 0.5)"
+    },
+    "status": {
+      "success": "#05D59E",
+      "warning": "#FFB800",
+      "destructive": "#EF4444"
+    },
+    "border": {
+      "DEFAULT": "rgba(255, 255, 255, 0.08)",
+      "focus": "#FF2A6D"
+    }
+  },
+  "spacing_and_layout": {
+    "philosophy": "Generous Spacing Philosophy combined with dense 'Control Room' grids for B2B dashboards.",
+    "container_padding": "p-6 sm:p-8 lg:p-12",
+    "grids": {
+      "marketing_bento": "grid grid-cols-1 md:grid-cols-8 lg:grid-cols-12 gap-8",
+      "dashboard_control_room": "grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4"
+    },
+    "mobile_first": "PWA priority. Essential navigation must sit in a sticky bottom glassmorphic bar on mobile."
+  },
+  "components": {
+    "buttons": {
+      "primary": "bg-[#FF2A6D] text-white font-semibold rounded-none hover:bg-[#FF528A] hover:shadow-[0_0_15px_rgba(255,42,109,0.5)] transition-all duration-300",
+      "secondary": "bg-transparent border border-[#01CDFE] text-[#01CDFE] hover:bg-[#01CDFE] hover:text-black hover:shadow-[0_0_15px_rgba(1,205,254,0.5)] transition-all duration-300",
+      "ghost": "bg-transparent text-white hover:text-[#FF2A6D] hover:bg-white/5 transition-all duration-300"
+    },
+    "cards": {
+      "base": "bg-[#0F0F15] border border-white/5 rounded-none p-6 relative overflow-hidden",
+      "hover_effect": "hover:-translate-y-1 hover:border-[#01CDFE]/50 hover:shadow-[0_8px_32px_rgba(1,205,254,0.1)] transition-all duration-300"
+    },
+    "inputs": {
+      "base": "bg-[#05050A] border border-white/10 text-white placeholder:text-zinc-500 focus:border-[#FF2A6D] focus:ring-1 focus:ring-[#FF2A6D] rounded-none px-4 py-2"
+    },
+    "badges": {
+      "neon_pill": "px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider border"
+    }
+  },
+  "surface_strategies": {
+    "glassmorphism": {
+      "usage": ["Mobile Bottom Nav", "Sticky App Headers", "Geolocation Overlays"],
+      "classes": "bg-[#0F0F15]/70 backdrop-blur-xl backdrop-saturate-150 border-b border-t border-white/5 shadow-lg"
+    },
+    "grid_borders": {
+      "usage": ["Admin/Organizer Dashboards", "Data Tables", "Stat Blocks"],
+      "classes": "border-collapse border-r border-b border-white/5"
+    },
+    "tracing_beam": {
+      "usage": ["Premium Sponsor Cards", "Exclusive VIP Coupons"],
+      "effect": "Use framer-motion to create a moving gradient line along the border with a blur behind it."
+    }
+  },
+  "animations_and_interactions": {
+    "transitions": "transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1)",
+    "hover_states": "All interactive elements MUST change color and apply subtle neon glowing drop-shadows.",
+    "favorites_heart": "When clicked, scale up 1.2x, change to solid #FF2A6D, and drop a soft pink shadow.",
+    "coupon_cooldown": "Visual progress bar or countdown overlay with #FFB800 color.",
+    "accessibility": "Respect prefers-reduced-motion. Ensure active states have 3:1 contrast against adjacent colors."
+  },
+  "accessibility_and_testing": {
+    "contrast": "Ensure text over images uses dark gradient overlays (bg-gradient-to-t from-[#05050A] via-[#05050A]/80 to-transparent).",
+    "test_ids": "CRITICAL: All interactive elements (buttons, inputs, tabs, coupons) MUST have a data-testid attribute in kebab-case."
+  },
+  "image_urls": [
+    {
+      "category": "hero_background",
+      "url": "https://images.unsplash.com/photo-1642537389593-cf3f195905d1?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMjV8MHwxfHNlYXJjaHwzfHxuZW9uJTIwbGlnaHRzJTIwYmFja2dyb3VuZHxlbnwwfHx8fDE3NzUyNjEwNTR8MA&ixlib=rb-4.1.0&q=85",
+      "description": "Abstract neon lights for energetic dark hero backgrounds."
+    },
+    {
+      "category": "luna_park_main",
+      "url": "https://images.pexels.com/photos/36642740/pexels-photo-36642740.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "description": "Colorful carousel and Ferris wheel lit up at night. Excellent for main landing page or top park."
+    },
+    {
+      "category": "luna_park_secondary",
+      "url": "https://images.pexels.com/photos/1336429/pexels-photo-1336429.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "description": "Vibrant night scene of illuminated rides."
+    },
+    {
+      "category": "luna_park_tertiary",
+      "url": "https://images.unsplash.com/photo-1721598322171-5fa4982fadd6?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzV8MHwxfHNlYXJjaHwyfHxhbXVzZW1lbnQlMjBwYXJrJTIwbmlnaHR8ZW58MHx8fHwxNzc1MjYxMDQ3fDA&ixlib=rb-4.1.0&q=85",
+      "description": "A merry go round lit up at night."
+    },
+    {
+      "category": "sponsor_logo_1",
+      "url": "https://images.unsplash.com/photo-1758914224092-2aba0d39c923?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAxODF8MHwxfHNlYXJjaHwxfHxicmFuZCUyMGxvZ28lMjBtb2Rlcm58ZW58MHx8fHwxNzc1MjYxMDQ2fDA&ixlib=rb-4.1.0&q=85",
+      "description": "Black cd logo on white background. Use mix-blend-screen or filter for dark mode compatibility if needed."
+    },
+    {
+      "category": "sponsor_logo_2",
+      "url": "https://images.unsplash.com/photo-1760037028517-e5cc6e3ebd3e?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAxODF8MHwxfHNlYXJjaHwyfHxicmFuZCUyMGxvZ28lMjBtb2Rlcm58ZW58MHx8fHwxNzc1MjYxMDQ2fDA&ixlib=rb-4.1.0&q=85",
+      "description": "Apple sports logo."
+    },
+    {
+      "category": "coupon_graphic",
+      "url": "https://images.unsplash.com/photo-1569409611680-1d67b2f9fed0?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxOTF8MHwxfHNlYXJjaHwyfHxnbG93aW5nJTIwdGlja2V0JTIwb3IlMjBjb3Vwb258ZW58MHx8fHwxNzc1MjYxMDU0fDA&ixlib=rb-4.1.0&q=85",
+      "description": "Ticket graphic for the coupon component."
+    }
+  ],
+  "instructions_to_main_agent": [
+    "1. FRAMEWORK: Use Shadcn UI extensively for the multiple dashboards (Admin, Ride Owner, Organizer). Override their default classes to match this neon/dark theme (remove standard borders, add white/5 borders, use sharp or rounded-none edges).",
+    "2. ICONS: Install and use `lucide-react` (default) or `phosphor-react`. Ensure icons in active states glow using Tailwind drop-shadow classes.",
+    "3. PWA LAYOUT: Ensure there is a `<nav>` functioning as a sticky bottom bar on mobile screens for users (`fixed bottom-0 w-full z-50 glassmorphism`) containing Home, Map/Nearby, Favorites, and Profile.",
+    "4. COUPON SYSTEM: Make the coupon cooldown visually distinct (e.g., desaturated look or countdown timer overlay) so users understand it's locked.",
+    "5. DATA-TESTID: Append `data-testid=\"[element-role]\"` to all clickable buttons, links, inputs, and major containers (e.g., `data-testid=\"coupon-redeem-btn\"`).",
+    "6. MULTI-ROLE: visually separate the B2B dashboard views from the User app view. The User app is highly visual (large images, big buttons), while the B2B dashboard should use the 'Control Room' grid layout (dense, chart-heavy, data-focused)."
+  ]
+}
