@@ -52,6 +52,10 @@ export default function Login() {
         message = "Password troppo debole (min. 6 caratteri)";
       } else if (err.code === "auth/user-not-found" || err.code === "auth/wrong-password" || err.code === "auth/invalid-credential") {
         message = "Email o password errati";
+      } else if (err.code === "auth/configuration-not-found") {
+        message = "Configurazione Firebase non completa. Abilita Email/Password nella console Firebase.";
+      } else if (err.code === "auth/network-request-failed") {
+        message = "Errore di rete. Controlla la connessione.";
       } else if (err.message) {
         message = err.message;
       }
