@@ -2,7 +2,7 @@
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://alanpower17.github.io/emergent2",
+  "homepage": "https://alanpower17.github.io/emergent2/",
   "dependencies": {
     "@hookform/resolvers": "^5.0.1",
     "@radix-ui/react-accordion": "^1.2.8",
@@ -58,6 +58,8 @@
     "zod": "^3.24.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+  "deploy": "gh-pages -d build",
     "start": "craco start",
     "build": "craco build",
     "test": "craco test"
